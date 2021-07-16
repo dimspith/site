@@ -1,0 +1,41 @@
+body {
+    font-family: 'Open Sans';
+    color: #332e38;
+}
+
+header {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+a {
+    color: #8a98ac;
+    text-decoration: underline;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background-image: url(../images/logo256.png);
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    margin-right: 1em;
+    -webkit-filter: grayscale(100%);
+}
+
+.row {
+    margin-bottom: 2%;
+}
+
+.icon {
+    color: #000;
+}
+
+.small {
+    font-size: 1em;
+}
+
+.bold {
+    font-weight: bold;
+}

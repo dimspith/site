@@ -1,48 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Basic Page Needs
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title>Dimspith's Webpage</title>
-    <meta name="My personal website" content="">
-    <meta name="dimspith" content="">
+    <head>
+        <!-- Basic Page Needs
+             –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>Dimspith's Webpage</title>
+        <meta name="My personal website" content="">
+        <meta name="dimspith" content="">
 
-    <!-- Mobile Specific Metas
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Mobile Specific Metas
+             –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- FONT
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/raleway" type="text/css"/> 
+        <!-- CSS
+             –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" type="text/css" href="public/css/fontello.css">
+        <link rel="stylesheet" type="text/css" href="public/css/font.css">
+        <link rel="stylesheet" href="public/css/normalize.css">
+        <link rel="stylesheet" href="public/css/milligram.min.css">
+        <link rel="stylesheet" type="text/css" href="public/css/style.css">
 
-    <!-- CSS
-         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/milligram.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/font.css">
-
-    <!-- Plausible analytics script
-         ------------------------------------------------- -->
-    <script async defer data-api="https://dimspith.com/api/event"
-            data-domain="dimspith.com"
-            src="https://dimspith.com/js/pls.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="one-half column" style="margin-top: 25%">
-          <h1>Welcome to my homepage!</h1>
-          <p>
-            Unfortunately, this page is not yet complete.
-            For the time being here is a list of services i host:
-          </p>
-          <ul>
-            <li><a href="https://searx.dimspith.com">searx</a></li>
-          </ul>
+        <!-- Plausible analytics script
+          ------------------------------------------------- -->
+        <script async defer data-api="https://dimspith.com/api/event"
+                data-domain="dimspith.com"
+                src="https://dimspith.com/js/pls.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <a href="/">
+                    <div id="logo"></div>
+                    <h3 id="name">dimspith</h3>
+                </a>
+            </header>
+            <div class="row">
+                <div class="column">
+                    Hi, I'm dimspith, an undergraduate student at the Computer Science Department, University of Crete.
+                    My real name is Dimitris and i'm from Greece.
+                    I love FOSS (Free and Open Source Software), i like computers, music, drawing, cats and reading books.
+                </div>
+            </div>
+            <div class="row">
+                <div class="column small">
+                    You can find me on
+                    <a href="https://github.com/dimspith/" target="_blank" class="icon">
+                        <i class="icon-github"></i></a>
+                    and
+                    <a href="mailto:info@dimspith.com" target="_blank" class="icon">
+                        <i class="icon-mail"></i> </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <h4 class="bold">Fields of Interest</h4>
+                    <ul>
+                        <li>Functional Programming</li>
+                        <li>Internet Privacy</li>
+                        <li>Cybersecurity</li>
+                        <li>Digital Art</li>
+                        <li>Everything about GNU/Linux</li>
+                    </ul>                    
+                </div>
+                <div class=" column">
+                    <h4 class="bold">Services i host</h4>
+                    <ul>
+                        <li><a href="https://searx.dimspith.com" target="_blank">searx</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4 class="bold">Projects and Repos</h4>
+                    <ul>
+                        <li><a href="https://github.com/dimspith/confie" target="_blank">confie</a>
+                            : A simple dotfile manager</li>
+                        <li><a href="https://addons.mozilla.org/en-US/firefox/addon/mountain_theme" target="_blank">Mountain</a>
+                            : A firefox theme with colors based on the <a href="https://github.com/pradyungn/Mountain" target="_blank">Mountain</a> colorscheme</li>
+                        <li><a href="https://github.com/dimspith/lilsnek" target="_blank">Lilsnek</a>
+                            : Terminal snake game</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
