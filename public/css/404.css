@@ -1,0 +1,17 @@
+.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#error {
+    margin-top: 10%;
+}
+
+.spacing {
+    margin-bottom: 2%;
+}
+
+.bold {
+    font-weight: bold;
+}
