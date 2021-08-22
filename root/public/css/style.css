@@ -39,3 +39,7 @@ a {
 .bold {
     font-weight: bold;
 }
+
+#footer-font {
+    color: #777;
+}
