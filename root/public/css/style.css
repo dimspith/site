@@ -1,11 +1,7 @@
+/* ---------- General Styling ---------- */
 body {
     font-family: 'Open Sans';
-    color: #332e38;
-}
-
-header {
-    margin-top: 10%;
-    margin-bottom: 5%;
+    color: #454545;
 }
 
 a {
@@ -13,55 +9,43 @@ a {
     text-decoration: underline;
 }
 
-.navigation .logo {
-    width: 30px;
-    height: 5.2rem;
-    position: relative;
-    float: left;
-    background-size: 30px;
-    background-image: url(/public/images/logo256.webp);
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 1.5rem;
-}
-
-.row {
-    margin-bottom: 2%;
-}
-
-.icon {
-    color: #000;
-}
-
-.small {
-    font-size: 1em;
-}
-
 .bold {
     font-weight: bold;
 }
 
-#footer-font {
-    color: #777;
-}
 
+/* ---------- Navbar style ---------- */
 .navigation {
     border-bottom: .1rem solid #d1d1d1;
     background: #f4f5f6;
     height: 5.2rem;
+    line-height: 5.2rem;
     width: 100%;
 }
 
-.nav-head {
+.navigation * {
+    margin-bottom: 0;
 }
 
 .navigation a {
     text-decoration: none;
+    color: #332e38;
 }
 
 .navigation .container {
     padding-bottom: 0;
     padding-top: 0;
+}
+
+.navigation .logo {
+    width: 30px;
+    height: 5.2rem;
+    position: relative;
+    background-size: 28px;
+    background-image: url(/public/images/logo256.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1.5rem;
 }
 
 .navigation .name {
@@ -71,14 +55,34 @@ a {
     position: relative;
 }
 
-.navigation h4 {
-    margin-bottom: 0;
+.navigation .navigation-list {
+    list-style: none;
+    margin-right: 5rem;
 }
 
-.name {
-    color: #332e38;
+.navigation .navigation-item {
+    margin-left: 2.5rem;
 }
 
+/* ---------- Body Style ---------- */
 .main {
     padding-top: 3rem;
+}
+
+.main .icon {
+    color: #000;
+}
+
+.main .row {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* ---------- Footer Style ---------- */
+footer * {
+    color: #777;
+}
+
+footer .page-source {
+    text-align: right;
 }
