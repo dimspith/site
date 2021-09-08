@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>Dimspith's Webpage</title>
+        <meta name="My personal website" content="">
+        <meta name="dimspith" content="">
+        <meta name="description"
+              content="Hi, I'm dimspith, an undergraduate student at the Computer Science Department, University of Crete.">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/favicon/site.webmanifest">
+        
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CSS -->
+        {% block extra_css %}
+        {% endblock extra_css %}
+        <link rel="stylesheet" type="text/css" href="/css/font.css">
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link rel="stylesheet" href="/css/milligram.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+        <!-- Plausible analytics script -->
+        <script async defer data-api="https://dimspith.com/api/event"
+                data-domain="dimspith.com"
+                src="https://dimspith.com/js/pls.js"></script>
+    </head>
+    <body>
+        <nav class="navigation">
+            <section class="container nav-head">
+                <a href="/" class="navigation-title">
+                    <div class="logo float-left" alt="logo" src="public/images/logo256.webp"></div>
+                    <h5 class="name">dimspith</h5>
+                </a>
+                <ul class="navigation-list float-right">
+                    <li class="navigation-item float-left">
+                        <a class="button button-outline" href="/blog">Blog</a>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+        <div class="container main">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>

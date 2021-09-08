@@ -1,0 +1,118 @@
+/* ---------- General Styling ---------- */
+
+:root {
+    --background-color: #fff;
+    --text-color: #1a2a3a;
+    --text-light-color: #4a5a6a;
+    --navbar-background-color: #f4f5f6;
+    --navbar-separator-color: #d1d1d1;
+    --link-color: #0077aa;
+    --code-border-color: #8e68b2;
+    --main-icon-color: #000;
+    --button-color: #ad60a5;
+}
+
+body {
+    font-family: 'inter', sans-serif;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-light {
+    color: var(--text-light-color);
+}
+
+/* ---------- Navbar style ---------- */
+.navigation {
+    border-bottom: .1rem solid var(--navbar-separator-color);
+    background: var(--navbar-background-color);
+    height: 5.2rem;
+    line-height: 5.2rem;
+    width: 100%;
+}
+
+.navigation * {
+    margin-bottom: 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navigation .container {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.navigation .logo {
+    width: 30px;
+    height: 5.2rem;
+    position: relative;
+    background-size: 28px;
+    background-image: url(/images/logo256.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 1.5rem;
+}
+
+.navigation .name {
+    line-height: 5.2rem;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+
+.navigation .navigation-list {
+    list-style: none;
+    margin-right: 5rem;
+}
+
+.navigation .navigation-item {
+    margin-left: 2.5rem;
+}
+
+/* ---------- Body Style ---------- */
+.main {
+    padding-top: 3rem;
+}
+
+.main .icon {
+    color: var(--main-icon-color);
+}
+
+.main .row {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+pre {
+    border-left: 0.3rem solid var(--code-border-color);
+}
+
+pre > code {
+    background: inherit;
+}
+
+button {
+    color: var(--button-color);
+}
+
+/* ---------- Footer Style ---------- */
+
+footer .page-source {
+    text-align: right;
+}

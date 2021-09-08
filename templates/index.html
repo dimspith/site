@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="/css/fontello.css">
+{% endblock extra_css %}
+
+{% block content %}
+<div class="row">
+    <div class="column">
+        Hi, I'm dimspith, an undergraduate student at the
+        Computer Science Department, University of Crete.
+        My real name is Dimitris and i'm from Greece.
+        I love FOSS (Free and Open Source Software),
+        i like computers, music, drawing, cats and reading books.
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        You can find me on
+        <a href="https://github.com/dimspith/" rel="noopener" target="_blank" class="icon">
+            <strong class="icon-github">Github</strong></a>
+        and
+        <a href="mailto:info@dimspith.com" rel="noopener" target="_blank" class="icon">
+            <strong class="icon-mail">Email</strong> </a>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        <h4 class="bold">Fields of Interest</h4>
+        <ul>
+            <li>Programming Language Design</li>
+            <li>Internet Privacy</li>
+            <li>Cybersecurity</li>
+            <li>Digital Art</li>
+            <li>Everything about GNU/Linux</li>
+        </ul>
+    </div>
+    <div class=" column">
+        <h4 class="bold">Services i host</h4>
+        <ul>
+            <li><a href="https://searx.dimspith.com" rel="noopener" target="_blank">searx</a></li>
+        </ul>
+    </div>
+    <div class="column">
+        <h4 class="bold">Projects and Repos</h4>
+        <ul>
+            <li>
+                <a href="https://github.com/dimspith/confie" rel="noopener" target="_blank">confie</a>
+                : A simple dotfile manager
+            </li>
+            <li>
+                <a href="https://addons.mozilla.org/en-US/firefox/addon/mountain_theme" rel="noopener" target="_blank">Mountain</a>
+                : A firefox theme with colors based on the <a href="https://github.com/pradyungn/Mountain" rel="noopener" target="_blank">Mountain</a> colorscheme
+            </li>
+            <li>
+                <a href="https://github.com/dimspith/lilsnek" rel="noopener" target="_blank">Lilsnek</a>
+                : Terminal snake game
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="column column-100">
+        <h4 class="bold">Recent posts</h4>
+        {% set blog = get_section(path="blog/_index.md") %}
+        <ul>
+            {% for page in blog.pages %}
+            {% if loop.index == 5%}{% break %}{% endif %}
+            <li> <strong class="text-light">{{ page.date }}</strong>
+                <a href="{{page.permalink | safe}}">{{ page.title }}</a> </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<footer class="font-small pt-2">
+    <small>
+        <p class="float-left text-light">
+            © 2021 Dimitris Spythouris
+        </p>
+        <p class="float-right page-source">
+            <a href="https://github.com/dimspith/site">page source</a>
+        </p>
+    </small>
+</footer>
+{% endblock content %}
