@@ -1,21 +1,23 @@
 /* ---------- General Styling ---------- */
 
 :root {
-    --background-color: #fff;
-    --text-color: #1a2a3a;
-    --text-light-color: #4a5a6a;
-    --navbar-background-color: #f4f5f6;
+    --background-color: #f0f0f0;
+    --background-light-color: #fff;
+    --text-color: #121212;
+    --text-light-color: #4a4737;
+    --navbar-background-color: #30475e;
     --navbar-separator-color: #d1d1d1;
-    --link-color: #0077aa;
+    --link-color: #426a73;
     --code-border-color: #8e68b2;
     --main-icon-color: #000;
-    --button-color: #ad60a5;
+    --nav-button-color: #f05454;
 }
 
 body {
     font-family: 'inter', sans-serif;
     font-style: normal;
     color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 a {
@@ -45,12 +47,13 @@ a {
 }
 
 .navigation * {
+    color: var(--background-color);
     margin-bottom: 0;
 }
 
 .navigation a {
-    text-decoration: none;
-    color: var(--text-color);
+    /* text-decoration: none; */
+    /* color: var(--text-color); */
 }
 
 .navigation .container {
@@ -85,14 +88,20 @@ a {
     margin-left: 2.5rem;
 }
 
-.navigation-item .button {
-    padding-left: .7rem;
-    padding-right: .7rem;
+.nav-button {
+    background-color: var(--nav-button-color);
+    border-color: var(--nav-button-color);
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
 }
 
 /* ---------- Body Style ---------- */
 .main {
-    padding-top: 3rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--background-light-color);
+    border-radius: 10px;
 }
 
 .main .icon {
@@ -112,12 +121,17 @@ pre > code {
     background: inherit;
 }
 
-button {
-    color: var(--button-color);
-}
-
 /* ---------- Footer Style ---------- */
+
+footer {
+    padding-bottom: 3rem;
+}
 
 footer .page-source {
     text-align: right;
+}
+
+/* Post */
+.post {
+    font-size: 18px;
 }
