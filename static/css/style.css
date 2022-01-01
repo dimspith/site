@@ -85,6 +85,11 @@ a {
     margin-left: 2.5rem;
 }
 
+.navigation-item .button {
+    padding-left: .7rem;
+    padding-right: .7rem;
+}
+
 /* ---------- Body Style ---------- */
 .main {
     padding-top: 3rem;
