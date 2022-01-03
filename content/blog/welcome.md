@@ -15,11 +15,11 @@ just random interesting pieces of info that I want to share.
 
 #### So how was this website made?
 
-Part of the process of building your own website is finding the ideal
+Part of the process of building your website is finding the ideal
 software stack and a provider to host it.
 
-I wanted a simple site, with minimal Javascript, or preferrably, none
-and for it to be **fast**. So i rented a VPS and started tinkering.
+I wanted a simple site, with minimal Javascript, or preferably, none,
+and for it to be **fast**. So I rented a VPS and started tinkering.
 
 The resulting stack is:
 
