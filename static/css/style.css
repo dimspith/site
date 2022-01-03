@@ -146,7 +146,7 @@ pre > code {
     padding-bottom: 1rem;
     background-color: var(--background-light-color);
     border-radius: 10px;
-    width: 700px;
+    max-width: 66rem;
 }
 
 article a {
