@@ -1,5 +1,21 @@
 {% extends "base.html" %}
 
+{% block title %}
+{{ page.title }}
+{% endblock title %}
+
+
+{% block description %}
+"Post"
+{% endblock description %}
+
+
+{% block nav_buttons %}
+<a class="button nav-button" href="/blog">Blog</a>
+<a class="button nav-button" href="/notes">Notes</a>
+{% endblock nav_buttons %}
+
+
 {% block content %}
 <h2 class="title">
     {{ page.title }}

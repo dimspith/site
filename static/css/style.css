@@ -11,6 +11,7 @@
     --code-border-color: #8e68b2;
     --main-icon-color: #000;
     --nav-button-color: #f05454;
+    --nav-button-active-color: #F0A254;
 }
 
 body {
@@ -93,6 +94,14 @@ a {
     border-color: var(--nav-button-color);
     padding-left: 1.1rem;
     padding-right: 1.1rem;
+}
+
+.nav-button:hover {
+    background-color: var(--nav-button-active-color);
+}
+
+.nav-button-enabled {
+    background-color: var(--nav-button-active-color);
 }
 
 /* ---------- Body Style ---------- */

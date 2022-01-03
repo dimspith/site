@@ -1,5 +1,20 @@
 {% extends "base.html" %}
 
+
+{% block title %}
+Blog @ dimspith.com
+{% endblock title %}
+
+
+{% block description %}
+"Hi, I'm Dimitris, I mostly write about programming and other miscellaneous stuff."
+{% endblock description %}
+
+{% block nav_buttons %}
+<a class="button nav-button nav-button-enabled" href="/blog">Blog</a>
+<a class="button nav-button" href="/notes">Notes</a>
+{% endblock nav_buttons %}
+
 {% block content %}
 <center>
     <h1 class="title">

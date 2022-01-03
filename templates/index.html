@@ -1,8 +1,26 @@
 {% extends "base.html" %}
 
+
+{% block title %}
+Home @ dimspith.com
+{% endblock title %}
+
+
+{% block description %}
+"Hi, I'm Dimitris, an undergraduate student at the Computer Science Department, University of Crete."
+{% endblock description %}
+
+
+{% block nav_buttons %}
+<a class="button nav-button" href="/blog">Blog</a>
+<a class="button nav-button" href="/notes">Notes</a>
+{% endblock nav_buttons %}
+
+
 {% block extra_css %}
 <link rel="stylesheet" type="text/css" href="/css/fontello.css">
 {% endblock extra_css %}
+
 
 {% block content %}
 <div class="row">
