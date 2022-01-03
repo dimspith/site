@@ -13,7 +13,7 @@ Home @ dimspith.com
 
 {% block nav_buttons %}
 <a class="button nav-button" href="/blog">Blog</a>
-<a class="button nav-button" href="/notes">Notes</a>
+<!-- <a class="button nav-button" href="/notes" disabled>Notes</a> -->
 {% endblock nav_buttons %}
 
 
@@ -23,82 +23,98 @@ Home @ dimspith.com
 
 
 {% block content %}
-<div class="row">
-    <div class="column">
-        Hi, I'm dimspith, an undergraduate student at the
-        Computer Science Department, University of Crete.
-        My real name is Dimitris and i'm from Greece.
-        I love FOSS (Free and Open Source Software),
-        i like computers, music, drawing, cats and reading books.
+<div class="container main">
+    <div class="row">
+        <div class="column">
+            Hi, I'm dimspith, an undergraduate student at the
+            Computer Science Department, University of Crete.
+            My real name is Dimitris and i'm from Greece.
+            I love FOSS (Free and Open Source Software),
+            i like computers, music, drawing, cats and reading books.
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="column">
-        You can find me on
-        <a href="https://github.com/dimspith/" rel="noopener" target="_blank" class="icon">
-            <strong class="icon-github">Github</strong></a>
-        and
-        <a href="mailto:info@dimspith.com" rel="noopener" target="_blank" class="icon">
-            <strong class="icon-mail">Email</strong> </a>
+    <div class="row">
+        <div class="column">
+            You can find me on
+            <a href="https://github.com/dimspith/" rel="noopener" target="_blank" class="icon">
+                <strong class="icon-github">Github</strong></a>
+            and
+            <a href="mailto:info@dimspith.com" rel="noopener" target="_blank" class="icon">
+                <strong class="icon-mail">Email</strong> </a>
+        </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="column">
-        <h4 class="bold">Fields of Interest</h4>
-        <ul>
-            <li>Programming Language Design</li>
-            <li>Internet Privacy</li>
-            <li>Cybersecurity</li>
-            <li>Digital Art</li>
-            <li>Everything about GNU/Linux</li>
-        </ul>
+    <div class="row">
+        <div class="column">
+            <h3 class="bold">Fields of Interest</h3>
+            <ul>
+                <li>Programming Language Design</li>
+                <li>Internet Privacy</li>
+                <li>Cybersecurity</li>
+                <li>Digital Art</li>
+                <li>Everything about GNU/Linux</li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3 class="bold">Projects and Repos</h3>
+            <ul>
+                <li>
+                    <a class="umami--click--link-confie" href="https://github.com/dimspith/confie" rel="noopener" target="_blank">confie</a>
+                    : A simple dotfile manager
+                </li>
+                <li>
+                    <a class="umami--click--link-mountain" href="https://addons.mozilla.org/en-US/firefox/addon/mountain_theme" rel="noopener" target="_blank">Mountain</a>
+                    : A firefox theme with colors based on the <a href="https://github.com/pradyungn/Mountain" rel="noopener" target="_blank">Mountain</a> colorscheme
+                </li>
+                <li>
+                    <a class="umami--click--link-lilsnek" href="https://github.com/dimspith/lilsnek" rel="noopener" target="_blank">Lilsnek</a>
+                    : Terminal snake game
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="column">
-        <h4 class="bold">Projects and Repos</h4>
-        <ul>
-            <li>
-                <a href="https://github.com/dimspith/confie" rel="noopener" target="_blank">confie</a>
-                : A simple dotfile manager
-            </li>
-            <li>
-                <a href="https://addons.mozilla.org/en-US/firefox/addon/mountain_theme" rel="noopener" target="_blank">Mountain</a>
-                : A firefox theme with colors based on the <a href="https://github.com/pradyungn/Mountain" rel="noopener" target="_blank">Mountain</a> colorscheme
-            </li>
-            <li>
-                <a href="https://github.com/dimspith/lilsnek" rel="noopener" target="_blank">Lilsnek</a>
-                : Terminal snake game
-            </li>
-        </ul>
+    <div class="row">
+        <div class="column column-100">
+            <h3 class="bold">Recent posts</h3>
+            <div class="row">
+                {% set blog = get_section(path="blog/_index.md") %}
+                {% for page in blog.pages %}
+                {% if loop.index == 5%}{% break %}{% endif %}
+                <article class="column">
+                    <a href="{{page.permalink | safe}}">
+                        <h4>
+                            <strong>
+                                {{ page.title }}                                    
+                            </strong>
+                        </h4>
+                        <div class="article-summary">
+                            {{page.summary | safe}}
+                        </div>
+                    </a>
+                    <div class="article-date">
+                        {{page.date}}            
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+        </div>
+
     </div>
+    <footer class="font-small pt-2">
+        <small>
+            I made this website using <a href="https://getzola.org">Zola</a> and
+            <a href="https://milligram.io/">Milligram</a>. I also use <a href="https://umami.is">Umami</a> for analytics.
+            The collected data is open and can be viewed <a href="https://analytics.dimspith.com/share/hCXZ15fI/dimspith.com">here</a>.        
+        </small>
+        <br><br>
+        <small>
+            <p class="float-left text-light">
+                © 2021 Dimitris Spythouris
+            </p>
+            <p class="float-right page-source">
+                <a href="https://github.com/dimspith/site">page source</a>
+            </p>
+        </small>
+    </footer>    
 </div>
-<div class="row">
-    <div class="column column-100">
-        <h4 class="bold">Recent posts</h4>
-        {% set blog = get_section(path="blog/_index.md") %}
-        <ul>
-            {% for page in blog.pages %}
-            {% if loop.index == 5%}{% break %}{% endif %}
-            <li> <strong class="text-light">{{ page.date }}</strong>
-                <a href="{{page.permalink | safe}}">{{ page.title }}</a> </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
-<footer class="font-small pt-2">
-    <small>
-        I made this website using <a href="https://getzola.org">Zola</a> and
-        <a href="https://milligram.io/">Milligram</a>. I also use <a href="https://umami.is">Umami</a> for analytics.
-        The collected data is open and can be viewed <a href="https://analytics.dimspith.com/share/hCXZ15fI/dimspith.com">here</a>.        
-    </small>
-    <br><br>
-    <small>
-        <p class="float-left text-light">
-            © 2021 Dimitris Spythouris
-        </p>
-        <p class="float-right page-source">
-            <a href="https://github.com/dimspith/site">page source</a>
-        </p>
-    </small>
-</footer>
 {% endblock content %}

@@ -10,21 +10,31 @@ Blog @ dimspith.com
 "Hi, I'm Dimitris, I mostly write about programming and other miscellaneous stuff."
 {% endblock description %}
 
+
 {% block nav_buttons %}
 <a class="button nav-button nav-button-enabled" href="/blog">Blog</a>
-<a class="button nav-button" href="/notes">Notes</a>
+<!-- <a class="button nav-button" href="/notes" disabled>Notes</a> -->
 {% endblock nav_buttons %}
 
+
 {% block content %}
-<center>
-    <h1 class="title">
-        {{ section.title }}
-    </h1>
-</center>
-<ul>
-    {% for page in section.pages %}
-    <li><a href="{{page.permalink | safe}}">{{ page.title }}</a>
-    </li>
-    {% endfor %}
-</ul>
+{% for page in section.pages %}
+<div class="container blog">
+    <article>
+        <a href="{{page.permalink | safe}}">
+            <h4>
+                <strong>
+                    {{ page.title }}                                    
+                </strong>
+            </h4>
+            <div class="article-summary">
+                {{page.summary | safe}}
+            </div>
+        </a>
+        <div class="article-date">
+            {{page.date}}            
+        </div>
+    </article>
+</div>
+{% endfor %}
 {% endblock content %}

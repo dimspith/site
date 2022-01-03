@@ -6,22 +6,29 @@
 
 
 {% block description %}
-"Post"
+"{{page.summary | safe}}"
 {% endblock description %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="/css/blog.css">
+{% endblock extra_css %}
 
 
 {% block nav_buttons %}
 <a class="button nav-button" href="/blog">Blog</a>
-<a class="button nav-button" href="/notes">Notes</a>
+<!-- <a class="button nav-button" href="/notes" disabled>Notes</a> -->
 {% endblock nav_buttons %}
 
 
 {% block content %}
-<h2 class="title">
-    {{ page.title }}
-</h2>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-<div class="post">
-    {{ page.content | safe }}    
+<div class="container blog">
+    <h3 class="post-title"><strong>{{ page.title }}</strong></h3>
+    <div class="article-date">
+        {{page.date}}            
+    </div>
+    <div class="post">
+        {{ page.content | safe }}    
+    </div>    
 </div>
 {% endblock content %}
