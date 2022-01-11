@@ -31,7 +31,7 @@ Since most people block analytics (including me) and don't want to be
 tracked, Umami was a good choice since it's non-invasive, doesn't need
 any cookies to function and can be easily blocked. I even went a step
 further and opened up the collected data for all to see
-[here](https://analytics.dimspith.com/share/hCXZ15fI/dimspith.com).
+[here](https://an.dimspith.com/share/hCXZ15fI/dimspith.com).
 
 Although the website is not yet complete, I have lots of ideas on how
 to extend it and a couple of blog posts in mind for the future.
