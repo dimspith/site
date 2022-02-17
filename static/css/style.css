@@ -1,22 +1,23 @@
 /* ---------- General Styling ---------- */
 
 :root {
-    --background-color: #f0f0f0;
+    --background-color: #ecf0f1;
     --background-light-color: #fff;
-    --text-color: #121212;
-    --text-light-color: #4a4737;
-    --navbar-background-color: #30475e;
-    --navbar-separator-color: #d1d1d1;
+    --text-color: #1a2a3a;
+    --text-light-color: #4a5a6a;
+    --navbar-background-color: #2c3e50;
+    --nav-button-color: #3498db;
+    --nav-button-active-color: #2980b9;
     --link-color: #426a73;
-    --code-border-color: #8e68b2;
-    --main-icon-color: #000;
-    --nav-button-color: #f05454;
-    --nav-button-active-color: #F0A254;
+    --code-border-color: #9b59b6;
+    --main-icon-color: #2c3e50;
+
 }
 
 body {
     font-family: 'inter', sans-serif;
     font-style: normal;
+    font-size: 1.8rem !important;
     color: var(--text-color);
     background-color: var(--background-color);
 }
@@ -40,7 +41,6 @@ a {
 
 /* ---------- Navbar style ---------- */
 .navigation {
-    border-bottom: .1rem solid var(--navbar-separator-color);
     background: var(--navbar-background-color);
     height: 5.2rem;
     line-height: 5.2rem;
@@ -113,6 +113,7 @@ a {
     padding-bottom: 1rem;
     background-color: var(--background-light-color);
     border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
 }
 
 .main .icon {
@@ -137,7 +138,6 @@ pre > code {
     background: inherit;
 }
 
-
 /* --------- Blog/Post Style ----------- */
 
 .blog {
@@ -147,6 +147,7 @@ pre > code {
     background-color: var(--background-light-color);
     border-radius: 10px;
     max-width: 66rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
 }
 
 article a {
@@ -160,10 +161,6 @@ article p {
 
 article h4 {
     margin-bottom: 0px;
-}
-
-.article-summary {
-    font-size: 1.6rem;
 }
 
 .article-date {
