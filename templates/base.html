@@ -17,6 +17,11 @@
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- Detect Feeds -->
+        {% block rss %}
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
+        {% endblock %}
+
         <!-- CSS -->
         {% block extra_css %}
         {% endblock extra_css %}

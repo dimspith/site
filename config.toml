@@ -1,11 +1,18 @@
 # The URL the site will be built for
-# base_url = "https://blog.dimspith.com"
-base_url = "http://localhost:1111"
+base_url = "https://blog.dimspith.com"
+#base_url = "http://localhost:1111"
+
+title = "dimspith"
+description = "Dimspith Blog"
+default_language = "en"
+
+minify_html = true
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
 generate_feed = true
+feed_filename = "atom.xml"
 
 [markdown]
 # Whether to do syntax highlighting
